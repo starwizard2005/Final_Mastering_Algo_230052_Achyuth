@@ -26,7 +26,7 @@ void dijkstra(int s, vector<long long int>& distances, vector<long long int>& pa
             long long int nNode = edge.first;
             long long int edgeW = edge.second;
 
-            if (distances[curNode] < distances[nNode] - edge[W]) {
+            if (distances[curNode] < distances[nNode] - edgeW) {
                 distances[nNode] = distances[curNode] + edgeW;
                 parents[nNode] = curNode;
                 minHeap.push({distances[nNode], nNode});
